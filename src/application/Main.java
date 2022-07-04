@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,22 +9,29 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	private static Stage stg;
+	
+	
 	@Override
-	public void start(Stage primaryStage) {
-		try {
+	public void start(Stage primaryStage) throws Exception{
 			
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/LoginView.fxml"));
-			Parent parent = loader.load();
+			stg = primaryStage;
+			primaryStage.setResizable(false);
 			
-			Scene mainScene = new Scene(parent);
-			primaryStage.setScene(mainScene);
-			primaryStage.setTitle("Tela de login");
+			Parent root = FXMLLoader.load(getClass().getResource("/views/LoginView.fxml")); 
+			primaryStage.setTitle("Automação Gerencial do Restaurante");
+			primaryStage.setScene(new Scene(root));
 			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+			
 	}
-
+	
+	public void mudarCena(String Fxml) throws IOException{
+		Parent Pane; 
+		Pane = FXMLLoader.load(getClass().getResource(Fxml)); 
+		stg.getScene().setRoot(Pane);
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
