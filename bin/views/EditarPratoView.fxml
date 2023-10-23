@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.EditarPratoController">
+   <children>
+      <TextField fx:id="nome" layoutX="14.0" layoutY="111.0" prefHeight="25.0" prefWidth="163.0" promptText="Nome" />
+      <TextField fx:id="descricao" layoutX="14.0" layoutY="196.0" prefHeight="25.0" prefWidth="163.0" promptText="Descrição" />
+      <Label layoutX="16.0" layoutY="138.0" text="Categoria:" />
+      <Label layoutX="12.0" layoutY="94.0" text=" Nome:" />
+      <Label layoutX="213.0" layoutY="14.0" text="Edição de Prato">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btEditar" layoutX="440.0" layoutY="329.0" mnemonicParsing="false" onAction="#onBtEditar" text="Editar" />
+      <Button fx:id="btVoltar" layoutX="16.0" layoutY="329.0" mnemonicParsing="false" onAction="#onBtVoltar" text="Voltar" />
+      <Label layoutX="187.0" layoutY="94.0" text="Ingredientes:" />
+      <TextField fx:id="categoria" layoutX="14.0" layoutY="155.0" prefHeight="25.0" prefWidth="163.0" promptText="Categoria" />
+      <Label layoutX="15.0" layoutY="180.0" text=" Descrição:" />
+      <TableView fx:id="ingredientes" layoutX="187.0" layoutY="112.0" prefHeight="170.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="92.0" text="Id Produto" />
+          <TableColumn fx:id="quantidadeCol" prefWidth="107.0" text="Quantidade" />
+        </columns>
+      </TableView>
+      <Label layoutX="399.0" layoutY="138.0" text="Id Produto:" />
+      <TextField fx:id="idProduto" layoutX="397.0" layoutY="163.0" prefHeight="25.0" prefWidth="110.0" promptText="Id" />
+      <Button fx:id="adicionar" layoutX="453.0" layoutY="242.0" mnemonicParsing="false" onAction="#onBtAdicionar" prefHeight="25.0" prefWidth="69.0" text="Adicionar" />
+      <Button fx:id="btProdutos" layoutX="255.0" layoutY="296.0" mnemonicParsing="false" onAction="#onBtProdutos" text="Produtos" />
+      <Label layoutX="235.0" layoutY="279.0" text="Visualizar Produtos:" />
+      <Label layoutX="397.0" layoutY="188.0" text="Quantidade" />
+      <TextField fx:id="quantidade" layoutX="397.0" layoutY="208.0" prefHeight="25.0" prefWidth="110.0" promptText="Quantidade" />
+      <Label layoutX="395.0" layoutY="115.0" text="Cadastro ingrediente:" />
+      <Label layoutX="14.0" layoutY="225.0" text=" Preço:" />
+      <TextField fx:id="preco" layoutX="14.0" layoutY="242.0" prefHeight="25.0" prefWidth="163.0" promptText="Preço" />
+      <TextField fx:id="idPrato" layoutX="15.0" layoutY="69.0" prefHeight="25.0" prefWidth="163.0" promptText="Id Prato" />
+      <Label layoutX="18.0" layoutY="52.0" text="Id Prato:" />
+   </children>
+</AnchorPane>

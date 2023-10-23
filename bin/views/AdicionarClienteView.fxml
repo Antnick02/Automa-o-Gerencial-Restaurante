@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CadastrarClienteController">
+   <children>
+      <TextField fx:id="nome" layoutX="14.0" layoutY="81.0" prefHeight="25.0" prefWidth="163.0" promptText="Nome" />
+      <TextField fx:id="email" layoutX="13.0" layoutY="203.0" prefHeight="25.0" prefWidth="163.0" promptText="Email" />
+      <Label layoutX="13.0" layoutY="115.0" text="Cpf:" />
+      <Label layoutX="16.0" layoutY="178.0" text="Email:" />
+      <Label layoutX="14.0" layoutY="54.0" text="Nome:" />
+      <Label layoutX="119.0" layoutY="14.0" text="Cadastro de novo Cliente">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btCadastrar" layoutX="318.0" layoutY="254.0" mnemonicParsing="false" onAction="#onBtCadastrar" text="Cadastrar" />
+      <Button fx:id="btVoltar" layoutX="14.0" layoutY="254.0" mnemonicParsing="false" onAction="#onBtVoltar" text="Voltar" />
+      <TextField fx:id="telefone" layoutX="223.0" layoutY="81.0" prefHeight="25.0" prefWidth="163.0" promptText="Telefone" />
+      <Label layoutX="227.0" layoutY="54.0" text="Telefone:" />
+      <TextField fx:id="cpf" layoutX="13.0" layoutY="146.0" prefHeight="25.0" prefWidth="163.0" promptText="Cpf" />
+   </children>
+</AnchorPane>
